@@ -3,7 +3,9 @@
 A standalone embedded air-quality monitor built on the **STM32 Nucleo-F446RE** (ARM Cortex-M4). It reads temperature, pressure, and carbon monoxide (CO) concentration and displays them in real time on a 128×64 SSD1306 OLED, timestamped by the on-chip RTC — with no external MCU board support package or cloud dependency.
 
 Built using **STM32 HAL** (STM32CubeIDE / STM32CubeMX), not bare-metal register programming.
-**Final Display Output — live sensor readings on the SSD1306 OLED**
+
+
+**1.Final Display Output — live sensor readings on the SSD1306 OLED**
 
 ![Final Display Output](docs/images/oled_output.jpeg)
 
