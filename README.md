@@ -4,7 +4,9 @@ A standalone embedded air-quality monitor built on the **STM32 Nucleo-F446RE** (
 
 Built using **STM32 HAL** (STM32CubeIDE / STM32CubeMX), not bare-metal register programming.
 
-![OLED Output](docs/images/oled_output.jpeg)
+   ![Final Display Output](docs/images/oled_output.jpeg)
+   *Final display output — live sensor readings on the SSD1306 OLED*
+
 
 ---
 
@@ -55,7 +57,9 @@ This project uses the following STM32 peripherals, configured through STM32CubeM
 | | GND | CN6-6 (GND) | — |
 | | AOUT | Divider tap → PA0 | 2×10 kΩ divider (5 V → 2.5 V) |
 
-![Hardware Setup](docs/images/hardware_setup.jpeg)
+   ![Circuit Connection](docs/images/hardware_setup.jpeg)
+   *Circuit connection — breadboard wiring of the Nucleo-F446RE, sensor module, MQ-9, and OLED*
+
 
 ## Known Hardware Issue — Humidity Unavailable
 
