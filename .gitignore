@@ -1,0 +1,29 @@
+# STM32CubeIDE build output
+Debug/
+Release/
+*.o
+*.d
+*.su
+*.cyclo
+*.list
+*.map
+*.elf
+*.bin
+*.hex
+
+# STM32CubeIDE / Eclipse workspace metadata
+.metadata/
+.settings/
+.launch
+*.launch
+
+# Keep the project config files (do NOT ignore these)
+!.project
+!.cproject
+!*.ioc
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
