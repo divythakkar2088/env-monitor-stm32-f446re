@@ -56,8 +56,9 @@ This project uses the following STM32 peripherals, configured through STM32CubeM
 | | GND | CN6-6 (GND) | — |
 | | AOUT | Divider tap → PA0 | 2×10 kΩ divider (5 V → 2.5 V) |
 
-   ![Circuit Connection](docs/images/hardware_setup.jpeg)
-   *Circuit connection — breadboard wiring of the Nucleo-F446RE, sensor module, MQ-9, and OLED*
+**2.Circuit Connection — breadboard wiring of the Nucleo-F446RE, sensor module, MQ-9, and OLED**
+
+![Circuit Connection](docs/images/hardware_setup.jpeg)
 
 
 ## Known Hardware Issue — Humidity Unavailable
