@@ -63,8 +63,7 @@ This project uses the following STM32 peripherals, configured through STM32CubeM
 
 ![Circuit Connection](docs/images/hardware_setup.jpeg)
 
-Reference wiring diagram showing the connections between the STM32 Nucleo-F446RE, environmental sensor module, MQ-9 gas sensor, and SSD1306 OLED. This image is provided for reference to illustrate the hardware wiring layout and may differ slightly from the final prototype used in this repository.
-
+Reference breadboard wiring illustrating the interconnection of the STM32 Nucleo-F446RE, environmental sensor module, MQ-9 gas sensor, and SSD1306 OLED. This image is included for reference only to demonstrate the wiring layout and overall hardware connections. The actual implementation in this repository follows the same interface configuration, although the physical setup may differ slightly.
 
 ## Known Hardware Issue — Humidity Unavailable
 
