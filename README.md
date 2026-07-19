@@ -9,6 +9,9 @@ Built using **STM32 HAL** (STM32CubeIDE / STM32CubeMX), not bare-metal register 
 
 ![Final Display Output](docs/images/oled_output.jpeg)
 
+This image shows the OLED output captured during initial hardware validation. At this stage, humidity was displayed as 0% to verify sensor communication. Later testing confirmed that the purchased module, although labeled as BME280, is actually a BMP280-compatible sensor, which supports temperature and pressure only. As a result, the humidity value is unavailable and was removed from the final firmware.
+
+
 ## Features
 
 - Real-time temperature and pressure readout from a BMP280-compatible sensor over I2C
@@ -60,12 +63,14 @@ This project uses the following STM32 peripherals, configured through STM32CubeM
 
 ![Circuit Connection](docs/images/hardware_setup.jpeg)
 
+Reference wiring diagram showing the connections between the STM32 Nucleo-F446RE, environmental sensor module, MQ-9 gas sensor, and SSD1306 OLED. This image is provided for reference to illustrate the hardware wiring layout and may differ slightly from the final prototype used in this repository.
+
 
 ## Known Hardware Issue — Humidity Unavailable
 
-The environmental sensor module used in this build was purchased and sold as a **BME280**, but testing after assembly showed it is actually a **BMP280-compatible module** — it does not contain the humidity-sensing die that a genuine BME280 has. This was discovered only once the sensor was already integrated and tested, which is why the humidity line was disabled after the fact rather than during initial development.
+During testing, the environmental sensor module purchased as a BME280 was identified as a BMP280-compatible module. Since the BMP280 does not include a humidity sensor, only temperature and pressure measurements are available. The initial OLED output therefore displayed 0% humidity during validation. After confirming the hardware mismatch, the humidity field was removed from the final firmware to avoid displaying misleading data. Replacing the module with a genuine BME280 enables humidity measurement without significant firmware changes.
 
-Because the die simply isn't there, the BME280 driver returns a humidity value of **0%**, which is what an earlier OLED capture shows. Once this was identified, the humidity print line was deliberately commented out in `main.c` (see below) so the display no longer shows a meaningless 0% reading:
+
 
 ```c
 SSD1306_GotoXY(2, 18);
