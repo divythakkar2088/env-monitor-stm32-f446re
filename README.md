@@ -174,18 +174,6 @@ flowchart TD
 - Fit a CR2032 coin-cell holder for RTC battery backup across power cycles
 - Add a piezo-buzzer alert when CO exceeds the OSHA 8-hour permissible exposure limit (35 ppm)
 
-## Build & Flash Instructions
-
-**Requirements:** STM32CubeIDE (or STM32CubeMX + arm-none-eabi-gcc), ST-Link drivers (bundled with CubeIDE), a Nucleo-F446RE board.
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/<your-username>/env-monitor-stm32-f446re.git
-   ```
-2. Open **STM32CubeIDE** → `File` → `Open Projects from File System...` → select the cloned repository folder.
-3. Let the IDE index the project, then build: `Project` → `Build Project` (or the hammer icon).
-4. Connect the Nucleo-F446RE via USB (ST-Link) and flash: `Run` → `Debug` or `Run` (the green play icon).
-5. Wire the sensors as per the [Hardware Connections](#hardware-connections) table, power on, and observe the OLED.
 
 ## References
 
@@ -202,6 +190,8 @@ flowchart TD
 **Divy Thakar**
 Electronics & Communication Engineering
 
-## License
+MIT License
 
-This project is licensed under the [MIT License](LICENSE).
+Copyright (c) 2026 Divy Thakkar
+
+Permission is hereby granted
